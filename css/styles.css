@@ -1,0 +1,33 @@
+.card{
+  margin: 2px;
+  min-height:300px;
+}
+
+.header{
+  height: 95%;
+  padding: 2% ;
+}
+
+.header .content{
+  height: 100%;
+}
+
+.horizon{
+  background-color: #008cba;
+  min-height: 35%;
+  width: 100%;
+  max-width: none;
+  margin-bottom: 2%;
+}
+
+.horizon .content{
+  padding-top: 4%;
+}
+
+.content .row{
+  width: 50%;
+}
+
+ul.slick-dots{
+  margin-left: 0;
+}
