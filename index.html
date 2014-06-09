@@ -1,20 +1,25 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="itsmarcusApp">
   <head>
     <meta charset="utf-8" />
     <title>itsmarc.us | home </title>
     <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/slick.css" />  
     <link rel="stylesheet" href="css/styles.css" />  
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/angular-slick/dist/slick.js"></script>
+
     <script src="js/vendor/modernizr.js"></script>
-    <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation/foundation.js"></script>
     <script src="js/foundation/foundation.magellan.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-    <script src="js/vendor/slick.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-route.js"></script>
+    <script src="js/script.js"></script>
   </head>
 
-  <body>
+  <body ng-controller="mainController">
     <header>
       <div data-magellan-expedition="fixed">
         <dl class="sub-nav right">
@@ -43,7 +48,6 @@
         <h3>
           My focuses are data and api design<br>
           Lately I've been dabbling in Javascript and Objective-C<br>
-          I like developing location based apps<br>
         </h3>
       </div>
     </section>
@@ -52,18 +56,7 @@
       <ul class="medium-block-grid-3">
 
       <li>
-        <div class="card panel">
-          <h3 class="text-center">Education</h3>
-          <dl>
-            <dt>B.A. Geography with GIS, UC Santa Barbara '14</dt>
-            <dd>Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</dd>
-          </dl>
-          <dl>
-            <dt>Notable Classes</dt>
-            <ul class="round">
-              <li>Test element</li>
-            </ul>
-          </dl>
+        <div class="card panel" data-ng-include data-src="'partials/education.html'" data-ng-controller="aboutController">
         </div>
       </li>
 
@@ -90,88 +83,20 @@
       </li>
 
       <li>
-        <div class="card panel">
-          <h3 class="text-center">Work Experience</h3>
-          <dl>
-            <dt>Job</dt>
-            <dd>Description</dd>
-          </dl>
+        <div class="card panel" data-ng-include data-src="'partials/work.html'" data-ng-controller="aboutController">
         </div>
       </li>  
     </ul> 
 
     </section>
     <div class="row">
-      <h3 class="row text-center"  data-magellan-destination="projects">
+      <h3 class="text-center"  data-magellan-destination="projects">
         <a name="projects"></a>
         Projects
       </h3>
       <hr>
-      <section class="slider small-12 columns">
-        <div>
-          <div class="panel card">
-            <dl>
-              <dt>TeemUp Mobile<br>
-                <span class="round label">Obj-C</span>
-              </dt>
-              <dd>Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</dd>
-            </dl>
-          </div>
-        </div>
-
-        <div>
-          <div class="panel card">
-            <dl>
-              <dt>TeemUp<br>
-                <span class="success round label">Rails</span>
-                <span class="success round label">Postgres</span>
-                <span class="success round label">PostGIS</span>
-              </dt>
-              <dd>Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</dd>
-            </dl>
-          </div>
-        </div>
-
-        <div>
-          <div class="panel card">
-            <dl>
-              <dt>itsmarc.us<br>
-                <span class="round label">Angularjs</span>
-                <span class="round label">Nodejs</span>
-                <span class="alert round label">Mongodb</span>
-              </dt>
-              <dd>Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</dd>
-            </dl>
-          </div>
-        </div>      
-
-        <div>
-          <div class="panel card">
-            <dl>
-              <dt>TheModernAge.us<br>
-                <span class="alert round label">PHP</span>
-                <span class="alert round label">MySQL</span>
-              </dt>
-              <dd>Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</dd>
-            </dl>
-          </div>
-        </div>
-
-        <div>
-          <div class="panel card">
-            <dl>
-              <dt>Blicket<br>
-                <span class="round label">Node.js</span>
-                <span class="alert round label">Websockets</span>
-                <span class="round label">Obj-C</span>
-                <span class="alert round label">BLE</span>
-              </dt>
-              <dd>Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</dd>
-            </dl>
-          </div>
-        </div>
-
-      </section>
+      <slick infinite=false slides-to-show=2 touch-move="true" slides-to-scroll=2 dots=true data-ng-controller="projectsController" data-ng-include data-src="'partials/projects.html'">
+      </slick>
     </div>
 
     <a name="blurbs"></a>

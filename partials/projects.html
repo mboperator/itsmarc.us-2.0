@@ -1,0 +1,10 @@
+<div data-ng-repeat="project in projects">
+  <div class="card panel">
+    <dl>
+      <dt>{{ project.title }}<br>
+        <span class="round label {{ language.color | lowercase }}" data-ng-repeat="language in project.languages">{{ language.name }}</span>
+      </dt>
+      <dd>{{ project.description }}</dd>
+    </dl>
+  </div>
+</div>
