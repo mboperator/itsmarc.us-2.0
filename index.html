@@ -1,112 +1,179 @@
-<!doctype html>
-<html ng-app="itsmarcusApp">
-  <head>
-    <meta charset="utf-8" />
-    <title>itsmarc.us | home </title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/styles.css" />  
-    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+<!DOCTYPE html>
+<html lang="en">
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/slick-carousel/slick/slick.js"></script>
-    <script src="bower_components/angular-slick/dist/slick.js"></script>
+<head>
 
-    <script src="js/vendor/modernizr.js"></script>
-    <script src="js/foundation/foundation.js"></script>
-    <script src="js/foundation/foundation.magellan.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-route.js"></script>
-    <script src="js/script.js"></script>
-  </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <body ng-controller="mainController">
-    <header>
-      <div data-magellan-expedition="fixed">
-        <dl class="sub-nav right">
-          <dd data-magellan-arrival="top"><a href="#top">top</a></dd>
-          <dd data-magellan-arrival="about"><a href="#about">about</a></dd>
-          <dd data-magellan-arrival="projects"><a href="#projects">projects</a></dd>
-          <dd data-magellan-arrival="blurbs"><a href="#blurbs">blurbs</a></dd>
-          <dd data-magellan-arrival="contact"><a href="#contact">contact</a></dd>
-        </dl>
-      </div>
+    <title>Marcus Bernales | Mobile and Web Developer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-cloud"></i>  <span class="light">marcus</span> bernales
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading"><i class="fa fa-code"></i></h1>
+                        <p class="intro-text">I'm Marcus<br>I make web things.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <div class="header "  data-magellan-destination="top">
-      <a name="top"></a>
-      <div class="small-12 columns text-center content">
-        <h1>Hey, I'm Marcus</h1>
-        <h3 class="subheader">
-          and I<span class="slogan">'m a developer</span>.
-        </h3>
-      </div>
-    </div>
-
-    <a name="about"></a>
-    <section class="horizon row text-center" data-magellan-destination="about">
-      <div class='content'>
-        <h3>
-          My focuses are data and api design<br>
-          Lately I've been dabbling in Javascript and Objective-C<br>
-        </h3>
-      </div>
-    </section>
-
-    <section class="row">
-      <ul class="medium-block-grid-3">
-
-      <li>
-        <div class="card panel" data-ng-include data-src="'partials/education.html'" data-ng-controller="aboutController">
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <div class="circletag"></div>
+                <p>I'm a full-stack developer and with an inexplicable love for API and data design. I speak Rails, Objective-C, and more. When I'm not behind a monitor you can find me hiking, riding my bike, or taking pictures.
+                </p>
+            </div>
         </div>
-      </li>
-
-      <li>
-        <div class="card panel">
-          <h3 class="text-center">Languages Spoken</h3>
-          <ul class="no-bullet">
-            <li>Ruby</li>
-              <div class="success progress radius round">
-                <span class="meter" style="width: 90%"></span>
-              </div>
-            <li>Objective-C</li>
-              <div class="progress radius round">
-                <span class="meter" style="width: 60%"></span>
-              </div>
-            <li>Javascript</li>
-              <div class="alert progress radius round">
-                <span class="meter" style="width: 30%"></span>
-              </div>
-            <li>Honorable mention:</li>
-            <li>CSS, HTML, Python, Java, PHP, C++, C, Spanish</li>
-          </ul>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                
+            </div>
         </div>
-      </li>
+    </section>
 
-      <li>
-        <div class="card panel" data-ng-include data-src="'partials/work.html'" data-ng-controller="aboutController">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section text-center">
+        <div class="portfolio-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>My Work</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-lg-offset-2">
+                        <h3>Linx</h3>
+                        <p>Linx makes it easy to record videos, invite friends to collaborate, and share your creations with the world.</p>
+                        <a href="http://linxapp.co" class="btn btn-default btn-sm">Details</a>
+                    </div>
+                    <div class="col-lg-4 col-lg-offset-0">
+                        <h3>TeemUp</h3>
+                        <p>A mobile first solution to help you find out what's going on around you today, tomorrow, and in the future.</p>
+                        <a href="http://teemup.us" class="btn btn-default btn-sm">Details</a>
+                    </div>                                  
+                </div>
+            </div>
         </div>
-      </li>  
-    </ul> 
-
-    </section>
-    <div class="row">
-      <h3 class="text-center"  data-magellan-destination="projects">
-        <a name="projects"></a>
-        Projects
-      </h3>
-      <hr>
-      <slick infinite=false slides-to-show=2 touch-move="true" slides-to-scroll=2 dots=true data-ng-controller="projectsController" data-ng-include data-src="'partials/projects.html'">
-      </slick>
-    </div>
-
-    <a name="blurbs"></a>
-    <section class="horizon row text-center" data-magellan-destination="blurbs">
-
     </section>
 
-    <section class="row" data-magellan-destination="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Say hi</h2>
+                <p>I'm always open to new ideas, jobs, and friends. Drop me a line.</p>
+                <p><a href="mailto:hello@itsmarc.us">hello@itsmarc.us</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/marcusbernales" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/mboperator" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/pub/marcus-bernales/4b/228/71b" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-  </body>
-  <script src="js/style.js"></script>
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>From Isla Vista, with <i class ="fa fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
 </html>
